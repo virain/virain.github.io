@@ -19,4 +19,4 @@ jobs:
           fetch-depth: 0
       - uses: fregante/setup-git-user@v2
       - name: Update remote subtree
-        run: git subtree pull --prefix=content git@github.com:virain/ob_document.git main --squash
+        run: git subtree pull --prefix=content https://github.com/virain/ob_document.git main --squash
