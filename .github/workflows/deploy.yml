@@ -6,7 +6,7 @@ on:
       - v4
     repository_dispatch:
     types:
-      - build
+      - deploy
  
 permissions:
   contents: read
