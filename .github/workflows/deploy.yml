@@ -28,13 +28,18 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
+
+      - name: git config
+        run: |
+           git config --global user.email "xu_junkai@hotmail.com"
+           git config --global user.name "virain"
           
       - name: add subtree content
         run: git subtree add --prefix=content https://github.com/virain/ob_document.git main
         
       - name: Update remote subtree
         run: git subtree pull --prefix=content https://github.com/virain/ob_document.git main --squash
-        
+
       - name: Install Dependencies
         run: npm ci
         
