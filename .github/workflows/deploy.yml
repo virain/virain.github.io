@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - v4
-    repository_dispatch:
-    types:
-      - deploy
+    workflow_dispatch:
  
 permissions:
   contents: read
