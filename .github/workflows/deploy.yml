@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - v4
-  workflow_run:
-    workflows: [Update content]
+    repository_dispatch:
     types:
-      - completed
+      - build
  
 permissions:
   contents: read
