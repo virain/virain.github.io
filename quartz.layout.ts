@@ -25,7 +25,25 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.Explorer({
+        title: "📇 导航",
+        folderClickBehavior: "collapse", 
+        folderDefaultState: "collapsed",
+        useSavedState: true, 
+        filterFn: undefined,
+        mapFn: (node) => {
+          if (node.depth > 0) {
+            if (node.file) {
+              node.displayName = "📄 " + node.displayName
+            } else {
+              node.displayName = "📁 " + node.displayName
+            }
+          }
+        },
+      })
+    ),
+    // Component.Backlinks(),
   ],
   right: [
     // Component.Graph(),
