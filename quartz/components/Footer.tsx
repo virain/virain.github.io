@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
       <footer class={`${displayClass ?? ""}`}>
         <hr />
         <p>
-          Created with <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a>, © {year}
+        Copyright © 2020 - {year} 长沙零栈网络科技有限公司 | <a href="https://beian.miit.gov.cn/">湘ICP备 2021015322 号 </a>
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
