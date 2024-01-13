@@ -7,8 +7,8 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      阿里云市场: "https://market.aliyun.com/store/4925045/index.html",
-      腾讯云市场: "#"
+      "☁️阿里云市场": "https://market.aliyun.com/store/4925045/index.html",
+      "☁️腾讯云市场": "#"
     },
   }),
 }
